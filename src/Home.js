@@ -225,12 +225,12 @@ function Home() {
     }
 
     try {
-      const response = await axios.post(
+      const response2 = await axios.post(
         `http://localhost:4000/upload`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
-      const response2 = {
+      const response = {
         message: "Document analyzed, transformed, and inferred successfully",
         inference:
           "Dear patient, I have summarized the information from your medical chart for you:  Your name is not mentioned in the chart.  You are a male, and your age is not specified.  Your contact number is 138-000-111.  Your insurance company is Caritas Insurance, and your policy number is not mentioned.  Your current health status shows that your blood pressure is 120/80 mmHg, your heart rate is 70 beats per minute, your temperature is 98.6 degrees Fahrenheit, and your breathing rate is 16 breaths per minute. Your oxygen level is 98.  You have reported experiencing pain for the past week.  Your medical history is not provided, and there are no known allergies listed. In simple terms, your blood pressure and breathing rate are within normal ranges, and your heart rate and oxygen level are slightly above normal. However, the main concern is the pain that you have been experiencing for the past week. Your medical history and any allergies you might have are not available in the chart. We will continue to investigate the cause of your pain and provide you with the necessary care. If you have any further concerns or questions, please let us know. We are here to help you.",
